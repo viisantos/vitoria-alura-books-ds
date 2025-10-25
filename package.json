@@ -18,8 +18,8 @@
     "prepare": "tsdx build",
     "size": "size-limit",
     "analyze": "size-limit --why",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "peerDependencies": {
     "react": ">=16"
@@ -36,7 +36,7 @@
     "trailingComma": "es5"
   },
   "name": "ds-alurabooks-base",
-  "author": "vinicios neves",
+  "author": "Vitoria Santos",
   "module": "dist/ds-alurabooks-base.esm.js",
   "size-limit": [
     {
@@ -51,21 +51,27 @@
   "devDependencies": {
     "@babel/core": "^7.19.6",
     "@size-limit/preset-small-lib": "^8.1.0",
-    "@storybook/addon-essentials": "^6.5.13",
-    "@storybook/addon-info": "^5.3.21",
-    "@storybook/addon-links": "^6.5.13",
-    "@storybook/addons": "^6.5.13",
-    "@storybook/react": "^6.5.13",
+    "@storybook/addon-docs": "9.1.13",
+    "@storybook/addon-onboarding": "9.1.13",
+    "@storybook/react-vite": "9.1.13",
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.8",
     "babel-loader": "^9.1.0",
     "husky": "^8.0.1",
+    "postcss": "^8.5.6",
+    "postcss-loader": "^8.2.0",
+    "prop-types": "15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-is": "^18.2.0",
     "size-limit": "^8.1.0",
+    "storybook": "9.1.13",
     "tsdx": "^0.14.1",
     "tslib": "^2.4.1",
-    "typescript": "^4.8.4"
+    "typescript": "^4.8.4",
+    "vite": "^7.1.12"
+  },
+  "dependencies": {
+    "@types/styled-components": "^5.1.35"
   }
 }

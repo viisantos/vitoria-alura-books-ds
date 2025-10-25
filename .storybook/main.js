@@ -1,8 +1,18 @@
-module.exports = {
-  stories: ['../stories/**/*.stories.@(ts|tsx|js|jsx)'],
-  addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
-  // https://storybook.js.org/docs/react/configure/typescript#mainjs-configuration
-  typescript: {
-    check: true, // type-check stories during Storybook build
+
+
+/** @type { import('@storybook/react-vite').StorybookConfig } */
+const config = {
+  "stories": [
+    "../src/**/*.mdx",
+    "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"
+  ],
+  "addons": [
+    "@storybook/addon-docs",
+    "@storybook/addon-onboarding"
+  ],
+  "framework": {
+    "name": "@storybook/react-vite",
+    "options": {}
   }
 };
+export default config;
